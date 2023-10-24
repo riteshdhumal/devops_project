@@ -1,14 +1,14 @@
 provider "aws" {
 
-  access_key = "AKIAW4SOHOQRZ2UV4FGW"
-  secret_key = "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"
-  region     = "us-east-1"
+  access_key = "AKIA2DTX7HXCWXIRGNOG"
+  secret_key = "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"
+  region     = "us-east-2"
 }
 
 resource "aws_instance" "demo-server" {
-  ami           = "ami-053b0d53c279acc90"
+  ami           = "ami-09d9029d9fc5e5238"
   instance_type = "t2.micro"
-  key_name      = "dpp"
+  key_name      = "key-pair oct"
   //security_groups = [ "demo-sg" ]
   vpc_security_group_ids = [aws_security_group.demo-sg.id]
   subnet_id              = aws_subnet.dpp-public-subnet-01.id
